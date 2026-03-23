@@ -1,0 +1,23 @@
+# Environment files
+.env
+.env.*
+
+# Node
+node_modules/
+dist/
+build/
+
+# Java / Spring Boot
+target/
+*.class
+*.jar
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
