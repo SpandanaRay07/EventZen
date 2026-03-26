@@ -1,0 +1,180 @@
+/* Dashboard (page-scoped) */
+
+.Dashboard {
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.Dashboard h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--white-text);
+  margin: 0 0 18px;
+}
+
+/* Top stat cards */
+.Dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.Dashboard-card {
+  background: var(--white-surface);
+  border: 1px solid var(--border);
+  padding: 18px 20px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.Dashboard-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.Dashboard-card h3 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: var(--white-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.Dashboard-number {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--white-text);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.Dashboard-insights {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.Dashboard-insight-box {
+  background: var(--white-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+}
+
+.Dashboard-insight-box h4 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Chart (simple bars, showcase-only) */
+.Dashboard-chart-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.Dashboard-chart-average {
+  font-weight: 700;
+  color: var(--white-text);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.Dashboard-chart-average-num {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+}
+
+.Dashboard-chart-average-sub {
+  font-size: 12.5px;
+  color: var(--white-muted);
+  font-weight: 600;
+}
+
+.Dashboard-chart {
+  width: 100%;
+}
+
+.Dashboard-chart-bars {
+  height: 140px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  align-items: end;
+}
+
+.Dashboard-chart-bar {
+  background: rgba(200, 255, 90, 0.18);
+  border: 1px solid rgba(200, 255, 90, 0.35);
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  min-height: 4px;
+}
+
+.Dashboard-chart-bar > span {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(200, 255, 90, 0.9), rgba(200, 255, 90, 0.15));
+}
+
+.Dashboard-chart-labels {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  text-align: center;
+  color: var(--white-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.Dashboard-activity {
+  margin-top: 24px;
+  background: var(--white-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+}
+
+.Dashboard-activity h4 {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--black-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.Dashboard-activity ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.Dashboard-activity li {
+  margin-bottom: 8px;
+  color: var(--black-text);
+}
+
+@media (max-width: 900px) {
+  .Dashboard-insights {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,252 @@
+/* ================= FONT ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* ================= THEME ================= */
+
+:root {
+  --bg:            #1a1b22;
+  --sidebar:       #111218;
+  --surface:       #22242e;
+  --surface-light: #2a2d39;
+  --border:        rgba(255, 255, 255, 0.06);
+
+  --text:          #eeeef2;
+  --muted:         #8b8fa8;
+  --subtle:        #5a5e72;
+
+  --accent:        #c8ff5a;
+  --accent-dim:    rgba(200, 255, 90, 0.12);
+  --accent-hover:  rgba(200, 255, 90, 0.2);
+
+  --white-panel:   #e8e6e6;
+  --white-text:    #111218;
+  --white-muted:   #6b7280;
+  --white-border:  #e5e7eb;
+  --white-surface: #f9fafb;
+
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+  --radius-xl:  24px;
+
+  --shadow-sm:  0 1px 4px rgba(0,0,0,0.25);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.35);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.45);
+
+  --transition: 180ms ease;
+}
+
+/* ================= BASE ================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ================= APP LAYOUT ================= */
+
+.App {
+  display: flex;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+
+/* BUTTONS */
+.btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: white;
+  color: #000000;
+}
+
+.btn.primary:hover {
+  background: #f3f3f3;
+}
+
+.btn.secondary {
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+
+.btn.secondary:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+
+/* ================= BUTTON ================= */
+
+button,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13.5px;
+  font-family: inherit;
+  transition: opacity var(--transition), transform var(--transition);
+  white-space: nowrap;
+  margin: 10px 10px;
+}
+
+button:hover,
+.btn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+button:active,
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+  background: var(--surface-light);
+  color: var(--text);
+  opacity: 1;
+}
+
+/* ================= INPUT ================= */
+
+input,
+select,
+textarea {
+  background: var(--white-surface);
+  border: 1px solid var(--white-border);
+  padding: 9px 14px;
+  border-radius: var(--radius-md);
+  color: var(--white-text);
+  font-size: 13.5px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #aad64a;
+  box-shadow: 0 0 0 3px rgba(200, 255, 90, 0.12);
+}
+
+/* Dark surface inputs (used inside dark cards) */
+.dark-input input {
+  background: var(--surface-light);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+/* ================= TABLE ================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+thead th {
+  font-size: 11.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white-muted);
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--white-border);
+  text-align: left;
+}
+
+tbody td {
+  padding: 12px 14px;
+  color: var(--white-text);
+  vertical-align: middle;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--white-border);
+  transition: background var(--transition);
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: var(--white-surface);
+}
+
+/* ================= BADGE ================= */
+
+.badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.badge-green  { background: #dcfce7; color: #15803d; }
+.badge-yellow { background: #fef9c3; color: #92400e; }
+.badge-red    { background: #fee2e2; color: #b91c1c; }
+.badge-gray   { background: #f3f4f6; color: #6b7280; }
+
+/* ================= SECTION CARD ================= */
+
+.Section-card {
+  background: var(--white-panel);
+  border: 1px solid var(--white-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.Section-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white-text);
+  margin: 0 0 16px;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-light);
+  border-radius: 99px;
+}

@@ -1,0 +1,132 @@
+/* ================= HERO / PAGE HEADER ================= */
+
+.HomeContent-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--white-border);
+}
+
+.HomeContent-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--white-text);
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.HomeContent-subtitle {
+  font-size: 13.5px;
+  color: var(--white-muted);
+  margin: 0;
+}
+
+/* ================= CONTENT CARDS (dark) ================= */
+
+.HomeContent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.HomeContent-card {
+  background: var(--surface);
+  color: var(--text);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.HomeContent-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.HomeContent-card-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.HomeContent-card-meta {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.HomeContent {
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--bg), var(--accent));
+  color: white;
+  padding: 50px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  color: #ffe082;
+}
+
+.hero p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+/* TIP */
+.tip {
+  margin-top: 25px;
+  padding: 15px;
+  background: #f5f5ff;
+  border-left: 5px solid #6a5acd;
+  border-radius: 10px;
+  font-size: 14px;
+}

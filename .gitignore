@@ -1,14 +1,14 @@
-# Environment files
+# Environment
 .env
 .env.*
 
 # Node
-node_modules/
+**/node_modules/
 dist/
 build/
 
 # Java / Spring Boot
-target/
+**/target/
 *.class
 *.jar
 

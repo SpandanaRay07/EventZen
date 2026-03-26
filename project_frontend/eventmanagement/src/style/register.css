@@ -1,0 +1,129 @@
+/* AUTH PAGE  (Login & Register)
+───────────────────────────────────────── */
+
+.Auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 24px;
+}
+
+.Auth-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--shadow-lg);
+}
+
+.Auth-logo {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.Auth-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 4px;
+  letter-spacing: 0.03em;
+}
+
+.Auth-subtitle {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+
+/* Form */
+
+.Auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;          /* ← space between each field group */
+}
+
+.Auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;           /* ← space between label and input */
+}
+
+.Auth-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.Auth-input {
+  background: var(--surface-light);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.Auth-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.Auth-input::placeholder {
+  color: var(--subtle);
+}
+
+/* Submit button — sits below the last field with extra breathing room */
+
+.Auth-submit {
+  margin-top: 8px;      /* ← gap between last field and button */
+  width: 100%;
+  padding: 11px;
+  font-size: 14px;
+  border-radius: var(--radius-md);
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.Auth-submit:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.Auth-footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.Auth-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.Auth-link:hover {
+  text-decoration: underline;
+}
